@@ -11,7 +11,9 @@ app.listen(PORT, () => {
 });
 
 const MONGO_URL = process.env.MONGO_URL;
-
+app.get("/",async(req,res)=>{
+  res.send("Welcome to a basic mentor app")
+})
 async function createConnection() {
   try {
     const client = new MongoClient(MONGO_URL);
